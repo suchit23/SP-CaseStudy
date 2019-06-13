@@ -1,0 +1,16 @@
+Use the same webapp from gitghub
+	Implement JUnit or similar to automate testing 
+	Implement Sonarqube to do static code analysis
+		- use custom rules
+	Maintain docker images - everything should work inside the image 
+	Declarative code - pipeline as a code - and push to github
+	Kubnernetes - deploy inside K8S
+	Email notification on job failures in Jenkins
+	Front end validations such as text is there or not, image is there or not etc. -- Using Selenium 
+	Selenium tests should be integrated with Jenkins
+	Monitoring - Use stackdriver in GCP, monitor Uptime, CPU, Disk space etc. 
+	Deploy the whole application in K8N cluster 
+	Success Criteria: 
+		1. Jenkins pipeline code should work
+		2. Docker image should work
+		3. SS of various other things like Stackdriver etc. 
