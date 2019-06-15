@@ -5,6 +5,8 @@ SP-CaseStudy Development Steps
 	sp-sandbox will act like the desktop from where coding is done and hence will have the git repository and other utilities
 	sp-dev will act as the DEV environment where Jenkins will be installed
 2. Install Java and Jenkins in sp-dev
+	Install Nginx and set up port 80 to forward to Jenkins port 8080
+	<add steps here>
 3. Find a good sample java web app code in Github to use for the project
 4. Found git repo: https://github.com/saurabh0010/devops_pipeline_demo.git
 5. Duplicate this repo to your own repo:
@@ -35,3 +37,10 @@ SP-CaseStudy Development Steps
  	click on ok
  	enter your system mail name(Default you can select)
 	click on ok
+8. Various Jenkins configuration:
+	Install git and maven in the system having Jenkins
+	Manage Jenkins->Global Tool Config: Add git and Add maven
+	Ensure the plugin Email-Ext is installed
+        Configure email sending: Follow URL: https://www.360logica.com/blog/email-notification-in-jenkins/
+
+
