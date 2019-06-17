@@ -3,16 +3,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SPSeleniumDemo {
-       public WebDriver driver = new ChromeDriver();
-       public String appURL = "http://35.244.58.31:8081";
 
 @Test
 public void doLogin() {
-	//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+ 	ChromeOptions options = new ChromeOptions();
+	options.addArguments("--headless");
+	options.addArguments("--no-sandbox");
+	options.addArguments("--disable-dev-shm-usage");
+	
+       public WebDriver driver = new ChromeDriver(options);
+       public String appURL = "http://35.244.58.31:8081";
              // launch the firefox browser and open the application url
               driver.get(appURL);
              
