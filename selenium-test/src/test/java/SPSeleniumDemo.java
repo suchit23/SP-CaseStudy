@@ -17,8 +17,8 @@ public void doLogin() {
 	options.addArguments("--no-sandbox");
 	options.addArguments("--disable-dev-shm-usage");
 	
-       public WebDriver driver = new ChromeDriver(options);
-       public String appURL = "http://35.244.58.31:8081";
+        WebDriver driver = new ChromeDriver(options);
+        String appURL = "http://35.244.58.31:8081";
              // launch the firefox browser and open the application url
               driver.get(appURL);
              
