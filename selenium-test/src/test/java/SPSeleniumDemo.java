@@ -18,8 +18,7 @@ public void doLogin() {
 	options.addArguments("--disable-dev-shm-usage");
 	
         WebDriver driver = new ChromeDriver(options);
-        //String appURL = "http://35.244.58.31:8081";
-        String appURL = "https://sites.google.com/a/chromium.org/chromedriver/capabilities";
+        String appURL = "http://35.244.58.31:8081/sample.txt";
              // launch the firefox browser and open the application url
               driver.get(appURL);
              
