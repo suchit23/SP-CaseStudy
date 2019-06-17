@@ -12,6 +12,7 @@ public class SPSeleniumDemo {
 
 @Test
 public void doLogin() {
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
              // launch the firefox browser and open the application url
               driver.get(appURL);
              
