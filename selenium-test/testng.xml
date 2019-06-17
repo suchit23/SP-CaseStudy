@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="false">
   <test name="Test">
     <classes>
-      <class name="SPSeleniumDemo"/>
+      <class name="TestNG.SPSeleniumDemo"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
