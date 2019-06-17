@@ -42,5 +42,10 @@ SP-CaseStudy Development Steps
 	Manage Jenkins->Global Tool Config: Add git and Add maven
 	Ensure the plugin Email-Ext is installed
         Configure email sending: Follow URL: https://www.360logica.com/blog/email-notification-in-jenkins/
-
+9. Document installation of Jboss and console
+	https://stackoverflow.com/questions/26907323/jboss-wildfly-starts-but-cant-connect
+	https://vitux.com/install-and-configure-wildfly-jboss-on-ubuntu/
+	https://www.baeldung.com/wildfly-change-default-port
+10. Sonarqube details, plugin config etc
+	https://www.vultr.com/docs/how-to-install-sonarqube-on-ubuntu-16-04
 
