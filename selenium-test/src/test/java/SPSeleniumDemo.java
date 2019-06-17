@@ -27,11 +27,12 @@ public void doLogin() {
               driver.manage().window().maximize();
              
 // declare and initialize the variable to store the expected title of the webpage.
-              String expectedTitle = "https://sites.google.com/a/chromium.org/chromedriver/capabilities";
+              String expectedTitle = "Some Title";
              
 // fetch the title of the web page and save it into a string variable
               String actualTitle = driver.getTitle();
-              Assert.assertEquals(expectedTitle,actualTitle);
+              //Assert.assertEquals(expectedTitle,actualTitle);
+              Assert.assertEquals(actualTitle,expectedTitle);
              
 // close the web browser
               driver.close();
