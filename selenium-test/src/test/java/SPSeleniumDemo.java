@@ -36,5 +36,6 @@ public void doLogin() {
              
 // close the web browser
               driver.close();
+		System.exit(0);
 }
 } 
