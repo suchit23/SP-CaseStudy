@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class SPSeleniumDemo {
        public WebDriver driver = new FirefoxDriver();
-       String appUrl = "http://35.244.58.31:8081";
+       public String appURL = "http://35.244.58.31:8081";
 
 @Test
 public void doLogin() {
