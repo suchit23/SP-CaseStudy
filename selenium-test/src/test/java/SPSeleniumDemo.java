@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SP-Selenium-Demo {
+public class SPSeleniumDemo {
        public WebDriver driver = new FirefoxDriver();
        String appUrl = "http://35.244.58.31:8081";
 
