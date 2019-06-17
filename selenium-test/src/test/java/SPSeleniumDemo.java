@@ -36,7 +36,7 @@ public void doLogin() {
               String bodyText = driver.findElement(By.tagName("body")).getText();
               Assert.assertEquals(actualTitle,expectedTitle);
               //Assert.assertEquals(bodyText,expectedText);
-	      Assert.assertTrue("Text not found!", bodyText.contains(text));
+	      Assert.assertTrue("Text not found!",bodyText.contains(expectedText ));
              
 // close the web browser
               driver.close();
