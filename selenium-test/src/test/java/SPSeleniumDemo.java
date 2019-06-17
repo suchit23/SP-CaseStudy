@@ -18,7 +18,8 @@ public void doLogin() {
 	options.addArguments("--disable-dev-shm-usage");
 	
         WebDriver driver = new ChromeDriver(options);
-        String appURL = "http://35.244.58.31:8081";
+        //String appURL = "http://35.244.58.31:8081";
+        String appURL = "https://sites.google.com/a/chromium.org/chromedriver/capabilities";
              // launch the firefox browser and open the application url
               driver.get(appURL);
              
@@ -26,7 +27,7 @@ public void doLogin() {
               driver.manage().window().maximize();
              
 // declare and initialize the variable to store the expected title of the webpage.
-              String expectedTitle = " Sign in - Google Accounts ";
+              String expectedTitle = "https://sites.google.com/a/chromium.org/chromedriver/capabilities";
              
 // fetch the title of the web page and save it into a string variable
               String actualTitle = driver.getTitle();
