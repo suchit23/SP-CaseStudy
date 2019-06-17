@@ -2,12 +2,12 @@ package TestNG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SPSeleniumDemo {
-       public WebDriver driver = new ChromeDriver();
+       public WebDriver driver = new FirefoxDriver();
        public String appURL = "http://35.244.58.31:8081";
 
 @Test
