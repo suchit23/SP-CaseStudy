@@ -9,30 +9,50 @@ import org.testng.annotations.Test;
 
 public class SPSeleniumDemo {
 
+
 @Test
-public void doLogin() {
+public void checkRootPage() {
+  System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+  ChromeOptions options = new ChromeOptions();
+  options.addArguments("--headless");
+  options.addArguments("--no-sandbox");
+  options.addArguments("--disable-dev-shm-usage");
+  
+  WebDriver driver = new ChromeDriver(options);
+  String appURL = "http://test.suchit23.in";
+  // launch the chrome browser and open the application url
+  driver.get(appURL);
+  //maximize the browser window
+  driver.manage().window().maximize();
+  String expectedText = "Hello Suchit's World!";
+  //fetch the body of the web page
+  String bodyText = driver.findElement(By.tagName("body")).getText();
+  //check if the body has the text we are expecting
+  Assert.assertTrue(bodyText.contains(expectedText));
+  // close the web browser
+  driver.quit();
+}
+
+@Test
+public void checkSamplePage() {
 	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
  	ChromeOptions options = new ChromeOptions();
 	options.addArguments("--headless");
 	options.addArguments("--no-sandbox");
 	options.addArguments("--disable-dev-shm-usage");
 	
-        WebDriver driver = new ChromeDriver(options);
-        String appURL = "http://35.244.58.31:8081/sample.txt";
-             // launch the firefox browser and open the application url
-              driver.get(appURL);
-             
-// maximize the browser window
-              driver.manage().window().maximize();
-             
-// declare and initialize the variable to store the expected title of the webpage.
-              String expectedText = "==================================================================";
-             
-// fetch the title of the web page and save it into a string variable
-              String bodyText = driver.findElement(By.tagName("body")).getText();
-	      Assert.assertTrue(bodyText.contains(expectedText));
-             
-// close the web browser
-              driver.quit();
+  WebDriver driver = new ChromeDriver(options);
+  String appURL = "http://test.suchit23.in/sample.txt";
+  // launch the chrome browser and open the application url
+  driver.get(appURL);
+  //maximize the browser window
+  driver.manage().window().maximize();
+  String expectedText = "Suchit Prasanna";
+  //fetch the body of the web page
+  String bodyText = driver.findElement(By.tagName("body")).getText();
+	//check if the body has the text we are expecting
+  Assert.assertTrue(bodyText.contains(expectedText));
+  // close the web browser
+  driver.quit();
 }
 } 
