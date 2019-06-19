@@ -19,7 +19,7 @@ public void checkRootPage() {
   options.addArguments("--disable-dev-shm-usage");
   
   WebDriver driver = new ChromeDriver(options);
-  String appURL = "http://test.suchit23.in";
+  String appURL = "http://test.suchit23.in:8080";
   // launch the chrome browser and open the application url
   driver.get(appURL);
   //maximize the browser window
@@ -42,7 +42,7 @@ public void checkSamplePage() {
 	options.addArguments("--disable-dev-shm-usage");
 	
   WebDriver driver = new ChromeDriver(options);
-  String appURL = "http://test.suchit23.in/sample.txt";
+  String appURL = "http://test.suchit23.in:8080/sample.txt";
   // launch the chrome browser and open the application url
   driver.get(appURL);
   //maximize the browser window
