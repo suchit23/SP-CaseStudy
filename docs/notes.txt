@@ -13,4 +13,4 @@ Use the same webapp from gitghub
 	Success Criteria: 
 		1. Jenkins pipeline code should work
 		2. Docker image should work
-		3. SS of various other things like Stackdriver etc. 
+		3. SS of various other things like Stackdriver etc..

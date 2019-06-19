@@ -48,4 +48,6 @@ SP-CaseStudy Development Steps
 	https://www.baeldung.com/wildfly-change-default-port
 10. Sonarqube details, plugin config etc
 	https://www.vultr.com/docs/how-to-install-sonarqube-on-ubuntu-16-04
+11. Nagios: https://www.digitalocean.com/community/tutorials/how-to-install-nagios-4-and-monitor-your-servers-on-ubuntu-16-04
+12. Chromedriver: https://tecadmin.net/setup-selenium-chromedriver-on-ubuntu/
 

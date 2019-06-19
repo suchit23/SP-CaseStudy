@@ -1,0 +1,4 @@
+sp-sandbox	asia-south1-a	10.160.0.5	http://35.244.9.132 	http://sandbox.suchit23.in
+sp-dev		asia-south1-a	10.160.0.3	http://35.244.58.31		http://dev.suchit23.in
+sp-test		asia-south1-a	10.160.0.7	http://35.200.202.172	http://test.suchit23.in
+sp-prod		asia-south1-a	10.160.0.8	http://35.200.244.20	http://www.suchit23.in
