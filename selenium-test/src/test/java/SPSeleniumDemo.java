@@ -12,6 +12,7 @@ public class SPSeleniumDemo {
 
 @Test
 public void checkRootPage() {
+try{
   System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
   ChromeOptions options = new ChromeOptions();
   options.addArguments("--headless");
@@ -32,9 +33,17 @@ public void checkRootPage() {
   // close the web browser
   driver.quit();
 }
+catch(Exception e){
+  throw e;
+}
+finally (){
+  driver.quit();
+}
+}
 
 @Test
 public void checkSamplePage() {
+try{
 	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
  	ChromeOptions options = new ChromeOptions();
 	options.addArguments("--headless");
@@ -55,4 +64,12 @@ public void checkSamplePage() {
   // close the web browser
   driver.quit();
 }
+catch(Exception e){
+  throw e;
+}
+finally(){
+  driver.quit();
+}
+}
+
 } 
