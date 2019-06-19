@@ -27,6 +27,7 @@ public void checkRootPage() {
   String expectedText = "Hello Suchit's World!";
   //fetch the body of the web page
   String bodyText = driver.findElement(By.tagName("body")).getText();
+  System.out.println(bodyText);
   //check if the body has the text we are expecting
   Assert.assertTrue(bodyText.contains(expectedText));
   // close the web browser
@@ -50,6 +51,7 @@ public void checkSamplePage() {
   String expectedText = "Suchit Prasanna";
   //fetch the body of the web page
   String bodyText = driver.findElement(By.tagName("body")).getText();
+  System.out.println(bodyText);
 	//check if the body has the text we are expecting
   Assert.assertTrue(bodyText.contains(expectedText));
   // close the web browser
