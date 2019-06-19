@@ -33,10 +33,10 @@ try{
   // close the web browser
   driver.quit();
 }
-catch(Exception e){
-  throw e;
+catch (Exception e) {
+  System.out.println("Caught Exception");
 }
-finally (){
+finally{
   driver.quit();
 }
 }
@@ -45,7 +45,7 @@ finally (){
 public void checkSamplePage() {
 try{
 	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
- 	ChromeOptions options = new ChromeOptions();
+  ChromeOptions options = new ChromeOptions();
 	options.addArguments("--headless");
 	options.addArguments("--no-sandbox");
 	options.addArguments("--disable-dev-shm-usage");
@@ -67,7 +67,7 @@ try{
 catch(Exception e){
   throw e;
 }
-finally(){
+finally {
   driver.quit();
 }
 }
