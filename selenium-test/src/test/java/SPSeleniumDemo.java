@@ -33,6 +33,6 @@ public void doLogin() {
 	      Assert.assertTrue(bodyText.contains(expectedText));
              
 // close the web browser
-              driver.close();
+              driver.quit();
 }
 } 
