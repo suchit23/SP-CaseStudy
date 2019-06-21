@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: sp-deployment
+spec:
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: sp-app
+        env: production
+    spec:
+      containers:
+      - name: sp-container
+        image: suchit23/sp-casestudy-docker-image
