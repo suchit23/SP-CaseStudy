@@ -50,4 +50,7 @@ SP-CaseStudy Development Steps
 	https://www.vultr.com/docs/how-to-install-sonarqube-on-ubuntu-16-04
 11. Nagios: https://www.digitalocean.com/community/tutorials/how-to-install-nagios-4-and-monitor-your-servers-on-ubuntu-16-04
 12. Chromedriver: https://tecadmin.net/setup-selenium-chromedriver-on-ubuntu/
-
+13. K8N: https://www.youtube.com/watch?v=GTRS9zRWs80
+14. Kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
+   	Commands:
+	gcloud container clusters create sp-cluster --zone=asia-south1-a
