@@ -12,6 +12,7 @@ import java.net.InetAddress;
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.TimeZone;
 
 @RestController
 public class SampleResource {
@@ -25,8 +26,9 @@ public class SampleResource {
             StringBuffer sbrBuildSystem = new StringBuffer();
             InetAddress inetAddress = InetAddress.getLocalHost();
             DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            sdf.setTimeZone(TimeZone.getTimeZone("IST"));
             Date date = new Date();
-            sbrBuildSystem.append("<h2> IP Address where this was built: " + inetAddress.getHostAddress() + "<br> Hostname where this was built: " + inetAddress.getHostName() + "Time when this was built: " + sdf.format(date));
+            sbrBuildSystem.append("<h2> IP Address where this was built: " + inetAddress.getHostAddress() + "<br> Hostname where this was built: " + inetAddress.getHostName() + "<br> Time when this was built: " + sdf.format(date));
             
 
             
