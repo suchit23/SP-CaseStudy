@@ -33,7 +33,7 @@ public class SampleResource {
 
             
             try{
-            URL url = new URL("http://www.google.com/"); 
+            URL url = new URL("http://blog.suchit23.in/pension-payment-order/"); 
             BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
             while ((parseLine = br.readLine()) != null) {
                 System.out.println(parseLine);
