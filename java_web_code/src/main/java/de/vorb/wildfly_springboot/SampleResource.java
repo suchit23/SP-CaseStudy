@@ -17,7 +17,7 @@ import java.text.SimpleDateFormat;
 public class SampleResource {
 
     @RequestMapping("/")
-    public String hello() {
+    public String hello() throws Exception {
 
             String parseLine; /* variable definition *//* create objects */            
             StringBuffer sbrDoc = new StringBuffer();
