@@ -16,14 +16,18 @@ public class SampleResource {
 
             String parseLine; /* variable definition *//* create objects */            URL URL = new URL("http://www.example.com/"); 
             StringBuffer sbrDoc = new StringBuffer();
+            String strBuildSystem = "Hello Suchit's World! ----- Version 44444444";
+            
+            try{
             BufferedReader br = new BufferedReader(new InputStreamReader(URL.openStream()));
-
             while ((parseLine = br.readLine()) != null) {
                 System.out.println(parseLine);
                 sbrDoc.append(parseLine);
-            }
-            br.close();
-            String strBuildSystem = "Hello Suchit's World! ----- Version 44444444";
+            	}
+            	br.close();
+        	}
+        	catch (Exception e){System.out.println(e);}
+
         	String strReturn = sbrDoc + strBuildSystem;
         	return strReturn;
 
