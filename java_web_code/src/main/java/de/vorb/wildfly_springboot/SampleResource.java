@@ -8,6 +8,9 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
+import java.net.InetAddress;
+import java.util.Date;
+import java.text.DateFormat;
 
 @RestController
 public class SampleResource {
@@ -17,13 +20,14 @@ public class SampleResource {
 
             String parseLine; /* variable definition *//* create objects */            
             StringBuffer sbrDoc = new StringBuffer();
-            String strHello = "<h1>Hello and welcome to Suchit's CI/CD Pipeline Demo! ----- Version 4.0</h1><br><h2>Below are the system details where this program was built to know which environment was this built on:</h2>";
+            String strHello = "<h1>Hello and welcome to Suchit's CI/CD Pipeline Demo! ----- Version 4.0</h1><br>";
             StringBuffer sbrBuildSystem = new StringBuffer();
+            InetAddress inetAddress = InetAddress.getLocalHost();
+            DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            Date date = new Date();
+            sbrBuildSystem.append("<h2> IP Address where this was built: " + inetAddress.getHostAddress() + "<br> Hostname where this was built: " + inetAddress.getHostName() + "Time when this was built: " + sdf.format(date));
             
-            Map<String, String> env = System.getenv();
-        	for (String envName : env.keySet()) {
-            sbrBuildSystem.append(System.out.format("%s=%s%n",envName,env.get(envName)));
-        	}
+
             
             try{
             URL url = new URL("http://www.example.com/"); 
