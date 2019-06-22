@@ -16,7 +16,15 @@ public class SampleResource {
 
             String parseLine; /* variable definition *//* create objects */            
             StringBuffer sbrDoc = new StringBuffer();
-            String strBuildSystem = "Hello Suchit's World! ----- Version 44444444";
+            String strHello = "<h1>Hello and welcome to Suchit's CI/CD Pipeline Demo! ----- Version 4.0</h1><br><h2>Below are the system details where this program was built to know which environment was this built on:</h2>";
+            String strBuildSystem = "<h1>Hello and welcome to Suchit's CI/CD Pipeline Demo! ----- Version 4.0</h1>";
+            
+            Map<String, String> env = System.getenv();
+        	for (String envName : env.keySet()) {
+            System.out.format("%s=%s%n",
+                              envName,
+                              env.get(envName));
+        	}
             
             try{
             URL url = new URL("http://www.example.com/"); 
@@ -30,7 +38,7 @@ public class SampleResource {
         	catch (MalformedURLException me){System.out.println(me);}
         	catch (IOException ioe){System.out.println(ioe);}
 
-        	String strReturn = sbrDoc + strBuildSystem;
+        	String strReturn = strHello + strBuildSystem + sbrDoc;
         	return strReturn;
 
     }
