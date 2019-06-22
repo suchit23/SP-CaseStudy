@@ -13,7 +13,7 @@ public class SampleResource {
 
     @RequestMapping("/")
     public String hello() {
-    	try {
+
             String parseLine; /* variable definition *//* create objects */            URL URL = new URL("http://www.example.com/"); 
             StringBuffer sbrDoc = new StringBuffer();
             BufferedReader br = new BufferedReader(new InputStreamReader(URL.openStream()));
@@ -27,12 +27,6 @@ public class SampleResource {
         	String strReturn = sbrDoc + strBuildSystem;
         	return strReturn;
 
-        } catch (MalformedURLException me) {
-            System.out.println(me);
-
-        } catch (IOException ioe) {
-            System.out.println(ioe);
-        }
     }
 
 }
