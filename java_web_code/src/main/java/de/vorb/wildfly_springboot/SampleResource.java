@@ -26,7 +26,8 @@ public class SampleResource {
             	}
             	br.close();
         	}
-        	catch (Exception e){System.out.println(e);}
+        	catch (MalformedURLException me){System.out.println(me);}
+        	catch (IOException ioe){System.out.println(ioe);}
 
         	String strReturn = sbrDoc + strBuildSystem;
         	return strReturn;
