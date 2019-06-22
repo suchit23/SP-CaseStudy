@@ -19,12 +19,12 @@ public void checkRootPage() {
   options.addArguments("--disable-dev-shm-usage");
   
   WebDriver driver = new ChromeDriver(options);
-  String appURL = "http://test.suchit23.in:8080";
+  String appURL = "http://test.suchit23.in";
   // launch the chrome browser and open the application url
   driver.get(appURL);
   //maximize the browser window
   driver.manage().window().maximize();
-  String expectedText = "Hello Suchit's World!";
+  String expectedText = "Hello and welcome to Suchit's CI/CD Pipeline Demo!";
   //fetch the body of the web page
   String bodyText = driver.findElement(By.tagName("body")).getText();
   System.out.println(bodyText);
