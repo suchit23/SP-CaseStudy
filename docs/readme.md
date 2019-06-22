@@ -51,4 +51,4 @@ SP-CaseStudy Development Steps
 11. Nagios: https://www.digitalocean.com/community/tutorials/how-to-install-nagios-4-and-monitor-your-servers-on-ubuntu-16-04
 12. Chromedriver: https://tecadmin.net/setup-selenium-chromedriver-on-ubuntu/
 13. K8N: https://www.youtube.com/watch?v=GTRS9zRWs80
-14. Rolling update: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+14. Rolling update: https://kubernetes.io/docs/concepts/workloads/controllers/deployment
