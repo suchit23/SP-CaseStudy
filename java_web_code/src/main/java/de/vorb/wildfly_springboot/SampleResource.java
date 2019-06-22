@@ -23,6 +23,9 @@ public class SampleResource {
                 sbrDoc.append(parseLine);
             }
             br.close();
+            String strBuildSystem = "Hello Suchit's World! ----- Version 44444444";
+        	String strReturn = sbrDoc + strBuildSystem;
+        	return strReturn;
 
         } catch (MalformedURLException me) {
             System.out.println(me);
@@ -30,9 +33,6 @@ public class SampleResource {
         } catch (IOException ioe) {
             System.out.println(ioe);
         }
-        String strBuildSystem = "Hello Suchit's World! ----- Version 3333";
-        String strReturn = sbrDoc + strBuildSystem;
-        return strReturn;
     }
 
 }
