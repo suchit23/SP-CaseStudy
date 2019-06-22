@@ -11,6 +11,7 @@ import java.util.Map;
 import java.net.InetAddress;
 import java.util.Date;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 @RestController
 public class SampleResource {
