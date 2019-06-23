@@ -23,7 +23,7 @@ public class SampleResource {
             String parseLine; 
 			String strHello = "<h1>Hello and welcome to Suchit's CI/CD Pipeline Demo! ----- Version 4.0</h1><br>";
             String strDia = "<br><h2>High Level Architecture Diagram</h2><br><img src=/spdevops.jpg><br>";
-            String strDoc = "<h2><a href=http://blog.suchit23.in/environment-details-access> Step by Step Guide to implement this project></h2><br>"
+            String strDoc = "<h2><a href=http://blog.suchit23.in/environment-details-access> Step by Step Guide to implement this project></h2><br>";
             StringBuffer sbrBuildSystem = new StringBuffer();
             InetAddress inetAddress = InetAddress.getLocalHost();
             DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
