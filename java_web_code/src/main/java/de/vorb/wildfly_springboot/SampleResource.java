@@ -44,7 +44,6 @@ public class SampleResource {
                 sbrDia.append(parseLine);
             	}
             	br1.close();
-        	}
         	BufferedReader br2 = new BufferedReader(new InputStreamReader(url2.openStream()));
             while ((parseLine = br2.readLine()) != null) {
                 System.out.println(parseLine);
