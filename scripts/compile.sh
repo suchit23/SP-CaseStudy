@@ -4,3 +4,4 @@ echo ""
 
 cd java_web_code
 mvn install
+cd ..

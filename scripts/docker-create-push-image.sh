@@ -2,7 +2,7 @@
 echo "******* :: Starting Docker Tasks :: *******"
 echo ""
 
-cd ../docker/
+cd docker/
 
 echo "******* :: Starting Docker Build Tasks :: *******"
 echo ""
@@ -12,3 +12,4 @@ echo "******* :: Starting Docker Push Tasks :: *******"
 echo ""
 sudo docker login -u suchit23 -p Hrishita23@
 sudo docker push suchit23/sp-casestudy-docker-image
+cd ..
