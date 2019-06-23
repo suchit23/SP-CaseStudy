@@ -16,7 +16,7 @@ public class SampleResource {
     public String hello() throws Exception {
 
             String parseLine; 
-			String strHello = "<center><font face=verdana><h1>Hello and welcome to Suchit's CI/CD Pipeline Demo! ----- Version 7.0</h1><br>";
+			String strHello = "<center><font face=verdana><h1>Hello and welcome to Suchit's CI/CD Pipeline Demo! ----- Version 8.0</h1><br>";
             String strDia = "<br><h2>High Level Architecture Diagram</h2><br><img src=/spdevops.jpg><br>";
             String strDoc = "<h2><a href=http://blog.suchit23.in/devops-cicd-using-jenkins-maven-docker-sonar-selenium-kubernetes/> Step by Step Guide to implement this project</h2></center></font><br>";
             StringBuffer sbrBuildSystem = new StringBuffer();
