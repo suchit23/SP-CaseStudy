@@ -10,6 +10,7 @@ sudo docker build -t suchit23/sp-casestudy-docker-image .
 
 echo "******* :: Starting Docker Push Tasks :: *******"
 echo ""
-sudo docker login -u suchit23 -p Hrishita23@
+
+sudo cat ~/my_password.txt | docker login --username suchit23 --password-stdin
 sudo docker push suchit23/sp-casestudy-docker-image
 cd ..
