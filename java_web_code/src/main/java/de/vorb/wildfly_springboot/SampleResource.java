@@ -20,7 +20,8 @@ public class SampleResource {
     @RequestMapping("/")
     public String hello() throws Exception {
 
-            String parseLine; /* variable definition *//* create objects */            
+            String parseLine; /* variable definition *//* create objects */
+            StringBuffer sbrDia = new StringBuffer();      
             StringBuffer sbrDoc = new StringBuffer();
             String strHello = "<h1>Hello and welcome to Suchit's CI/CD Pipeline Demo! ----- Version 4.0</h1><br>";
             StringBuffer sbrBuildSystem = new StringBuffer();
@@ -33,18 +34,28 @@ public class SampleResource {
 
             
             try{
-            URL url = new URL("http://blog.suchit23.in/pension-payment-order/"); 
-            BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
-            while ((parseLine = br.readLine()) != null) {
+            URL url1= new URL("https://drive.google.com/file/d/1GNno3JoIn3YmXVSPcVxI4B7Pm2knuip-/view");
+            URL url2= new URL("http://blog.suchit23.in/environment-details-access/"); 
+            
+
+            BufferedReader br1 = new BufferedReader(new InputStreamReader(url1.openStream()));
+            while ((parseLine = br1.readLine()) != null) {
+                System.out.println(parseLine);
+                sbrDia.append(parseLine);
+            	}
+            	br1.close();
+        	}
+        	BufferedReader br2 = new BufferedReader(new InputStreamReader(url2.openStream()));
+            while ((parseLine = br2.readLine()) != null) {
                 System.out.println(parseLine);
                 sbrDoc.append(parseLine);
             	}
-            	br.close();
+            	br2.close();
         	}
         	catch (MalformedURLException me){System.out.println(me);}
         	catch (IOException ioe){System.out.println(ioe);}
 
-        	String strReturn = strHello + sbrBuildSystem + sbrDoc;
+        	String strReturn = strHello + sbrBuildSystem + sbrDia + sbrDoc;
         	return strReturn;
 
     }
