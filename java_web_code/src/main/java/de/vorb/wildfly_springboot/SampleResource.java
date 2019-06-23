@@ -21,7 +21,8 @@ public class SampleResource {
     public String hello() throws Exception {
 
             String parseLine; /* variable definition *//* create objects */
-            StringBuffer sbrDia = new StringBuffer();      
+            //StringBuffer sbrDia = new StringBuffer();
+            String strDia = "<img src=/spdevops.jpg>"   
             StringBuffer sbrDoc = new StringBuffer();
             String strHello = "<h1>Hello and welcome to Suchit's CI/CD Pipeline Demo! ----- Version 4.0</h1><br>";
             StringBuffer sbrBuildSystem = new StringBuffer();
@@ -34,16 +35,17 @@ public class SampleResource {
 
             
             try{
-            URL url1= new URL("https://drive.google.com/file/d/1GNno3JoIn3YmXVSPcVxI4B7Pm2knuip-/view");
+            //URL url1= new URL("https://drive.google.com/file/d/1GNno3JoIn3YmXVSPcVxI4B7Pm2knuip-/view");
             URL url2= new URL("http://blog.suchit23.in/environment-details-access/"); 
             
 
-            BufferedReader br1 = new BufferedReader(new InputStreamReader(url1.openStream()));
+            /*BufferedReader br1 = new BufferedReader(new InputStreamReader(url1.openStream()));
             while ((parseLine = br1.readLine()) != null) {
                 System.out.println(parseLine);
                 sbrDia.append(parseLine);
             	}
-            	br1.close();
+            	br1.close();*/
+
         	BufferedReader br2 = new BufferedReader(new InputStreamReader(url2.openStream()));
             while ((parseLine = br2.readLine()) != null) {
                 System.out.println(parseLine);
