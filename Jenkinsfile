@@ -1,16 +1,18 @@
-stage('compile-code') {
-  stages {
-    sh label: '', script: 'scripts/compile.sh'
-  }
-
-  agent {
+pipeline {
+    agent {
     label 'master'
-  }
-
-  options {
-    timeout(10)
-    timestamps
-    warnError('Error in compile-code stage')
-  }
+    }
+    stages {
+  
+        stage('SP-CaseStudy-Build') {
+        agent {
+        label 'master'
+        }
+            steps {
+            echo 'Running SP-CaseStudy-Build'
+            sh label: 'Call compile.sh script', script: 'scripts/compile.sh'
+            sh label: 'Call junit-test.sh script', script: 'scripts/junit-test.sh'
+            }
+        }
+    }
 }
-
