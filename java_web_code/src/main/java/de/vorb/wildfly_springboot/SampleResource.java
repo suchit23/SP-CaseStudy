@@ -22,7 +22,7 @@ public class SampleResource {
 
             String parseLine; /* variable definition *//* create objects */
             //StringBuffer sbrDia = new StringBuffer();
-            String strDia = "<img src=/spdevops.jpg>";
+            String strDia = "<br><img src=/spdevops.jpg><br>";
             StringBuffer sbrDoc = new StringBuffer();
             String strHello = "<h1>Hello and welcome to Suchit's CI/CD Pipeline Demo! ----- Version 4.0</h1><br>";
             StringBuffer sbrBuildSystem = new StringBuffer();
