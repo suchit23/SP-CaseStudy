@@ -56,7 +56,7 @@ public class SampleResource {
         	catch (MalformedURLException me){System.out.println(me);}
         	catch (IOException ioe){System.out.println(ioe);}
 
-        	String strReturn = strHello + sbrBuildSystem + sbrDia + sbrDoc;
+        	String strReturn = strHello + sbrBuildSystem + strDia + sbrDoc;
         	return strReturn;
 
     }
