@@ -1,25 +1,20 @@
-pipeline {
-    agent none
-    stages {
-        stage('SP-CaseStudy-Build') {
-            agent {
-            label 'master'
-            }
-            steps {
-                echo 'Running SP-CaseStudy-Build - Compile Code'
-                sh label: 'Call compile.sh script', script: 'scripts/compile.sh'
-                echo 'Running SP-CaseStudy-Build - Run JUnit'
-                sh label: 'Call junit-test.sh script', script: 'scripts/junit-test.sh'
-                echo 'Running SP-CaseStudy-Build - Sonar Code Analysis'
-                //TBD
-                echo 'Running SP-CaseStudy-Build - Deploy WAR'
-                sh label: 'Call deploy.sh script', script: 'scripts/deploy.sh'
-                echo 'Running SP-CaseStudy-Build - Build Docker and Push'
-                sh label: 'Call docker-create-push-image.sh script', script: 'scripts/docker-create-push-image.sh'
-            }
-        }
-    }
-    options { 
-    timestamps() 
-    }
-}
+pipeline { 
+    agent none 
+        options { 
+        timestamps() 
+        } 
+    stages { 
+        stage('SP-CaseStudy-Build') { 
+            agent { 
+            label 'master' 
+            } 
+            steps { 
+                sh label: 'Running SP-CaseStudy-Build - Compile Code', script: 'scripts/compile.sh' 
+                sh label: 'Running SP-CaseStudy-Build - JUnit Test', script: 'scripts/junit-test.sh' 
+                sh label: 'Running SP-CaseStudy-Build - Sonar Code Analysis', script: 'scripts/sonar.sh' 
+                sh label: 'Running SP-CaseStudy-Build - Deploy WAR', script: 'scripts/deploy.sh' 
+                sh label: 'Running SP-CaseStudy-Build - Build Docker and Push', script: 'scripts/docker-create-push-image.sh' 
+            } 
+        } 
+    } 
+} 
