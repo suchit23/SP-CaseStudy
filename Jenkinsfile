@@ -22,12 +22,20 @@ pipeline {
             label 'sp-test' 
             } 
             steps { 
-                sh label: 'Running SP-CaseStudy-Test - Docker Pull & Run', script: 'scripts/docker-pull-run.sh' 
+                //sh label: 'Running SP-CaseStudy-Test - Docker Pull & Run', script: 'scripts/docker-pull-run.sh' 
                 sh label: 'Running SP-CaseStudy-Test - Selenium Test', script: 'scripts/selenium-test.sh' 
-                //sh label: 'Running SP-CaseStudy-Build - Sonar Code Analysis', script: 'scripts/sonar.sh' 
-                //junit 'integration-testing/target/failsafe-reports/*.xml'
+                junit 'selenium-test/target/surefire-reports/*.xml'
                 //sh label: 'Running SP-CaseStudy-Build - Deploy WAR', script: 'scripts/deploy.sh' 
                 //sh label: 'Running SP-CaseStudy-Build - Build Docker and Push', script: 'scripts/docker-create-push-image.sh' 
+            } 
+        }
+        stage('SP-CaseStudy-Deploy') { 
+            agent { 
+            label 'sp-test' 
+            } 
+            steps { 
+                //sh label: 'Running SP-CaseStudy-Test - Docker Pull & Run', script: 'scripts/docker-pull-run.sh' 
+                sh label: 'Running SP-CaseStudy-Deploy - Kubernetes Deployment', script: 'scripts/k8n.sh' 
             } 
         } 
     } 
