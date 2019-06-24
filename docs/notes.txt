@@ -14,3 +14,74 @@ Use the same webapp from gitghub
 		1. Jenkins pipeline code should work
 		2. Docker image should work
 		3. SS of various other things like Stackdriver etc..
+
+
+
+
+**********************
+
+#----------------------------------------#
+#!/bin/bash
+#-POSTBUILD (PROVISIONING DEPLOYMENT)
+echo ""
+echo "..... Integration Phase Started :: Copying Artifacts :: ......"
+cd ../java_web_code/
+/bin/cp target/wildfly-spring-boot-sample-1.0.0.war ../docker/
+echo ""
+echo "..... Provisioning Phase Started :: Building Docker Container :: ......"
+cd ../docker/
+sudo docker build -t sp-casestudy-docker-image .
+
+docker run -itd -p 80:8080 --name sp-casestudy-docker-instance sp-casestudy-docker-image
+
+RUNNING=$(sudo docker inspect --format="{{ .State.Running }}" $CONTAINER 2> /dev/null)
+docker inspect --format="{{ .State.RUNNING }}" suchit23/sp-casestudy-docker-image
+
+
+#!/bin/bash
+echo "******* :: Deploying Docker :: *******"
+echo ""
+
+CONTAINER=$(sudo docker ps -a | grep suchit23 | awk '{print $1}')
+echo "Found container ID" $CONTAINER 
+sudo docker rm -f $CONTAINER
+
+
+    # run your container
+    echo ""
+	echo "..... Deployment Phase Started :: Building Docker Container :: ......"
+    sudo docker pull suchit23/sp-casestudy-docker-image
+	sudo docker run -itd -p 8080:8080 suchit23/sp-casestudy-docker-image
+	suchit23/sp-casestudy-docker-image
+	http://dev.suchit23.in/images/branding/googlelogo/1x/googlelogo_white_background_color_272x92dp.png
+
+	Pipeline Steps
+	1. git 
+	2. delete workspace
+	3. add timestamp info and other things about the build etc
+	4. run scripts - compile, junit, deploy, docker 
+	5. junit reports (surefire)
+	6. run sonar
+	7. build docker and push
+        8. pull docker and run
+        9. selenium
+        10. kubernetes 
+
+
+stage('compile-code') {
+  stages {
+    sh label: '', script: 'scripts/compile.sh'
+  }
+
+  agent {
+    label 'master'
+  }
+
+  options {
+    timeout(10)
+    timestamps
+    warnError('Error in compile-code stage')
+  }
+}
+
+
