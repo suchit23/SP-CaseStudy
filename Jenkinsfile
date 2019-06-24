@@ -1,7 +1,5 @@
-timestamps { pipeline {
-    agent {
-        label 'master'
-    }
+pipeline {
+    agent none
     stages {
         stage('SP-CaseStudy-Build') {
             agent {
@@ -21,5 +19,7 @@ timestamps { pipeline {
             }
         }
     }
-}
+    options { 
+    timestamps() 
+    }
 }
