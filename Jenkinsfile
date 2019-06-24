@@ -1,4 +1,4 @@
-pipeline {
+timestamps { pipeline {
     agent {
         label 'master'
     }
@@ -19,7 +19,7 @@ pipeline {
                 echo 'Running SP-CaseStudy-Build - Build Docker and Push'
                 sh label: 'Call docker-create-push-image.sh script', script: 'scripts/docker-create-push-image.sh'
             }
-	    cleanWs()
         }
     }
+}
 }
