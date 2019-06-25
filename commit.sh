@@ -1,3 +1,3 @@
 git add .
-git commit -m "Cheked in after some minor changes"
+git commit -m "Final touches..."
 git push origin master
