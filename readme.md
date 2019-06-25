@@ -15,12 +15,3 @@ This demonstration will simulate a completely automated CI/CD deployment pipelin
  8. Pull the Docker image from docker hub and run a test container in a test node (TEST ENV). (DEPLOYMENT AUTOMATION)
  9. Test the docker container using Selenium for specific texts in the web page (TEST AUTOMATION)
  10. Pull the Docker image from docker hub and deploy to a Kubernetes cluster in the cloud (PROD ENV) (DEPLOYMENT AUTOMATION)
-
-**Prerequisites**:
-This demonstration has the following prerequisites:
- 1. Jenkins should be installed with git, maven and shell plugins.
- 2. In Jenkins Server install using # yum -y install git maven docker before trying out this demo.
- 3. Changes to be made for Jenkins to be able to run docker.
-
-**Steps Followed**
-[Click here to see steps followed](http://blog.suchit23.in/devops-cicd-using-jenkins-maven-docker-sonar-selenium-kubernetes/)

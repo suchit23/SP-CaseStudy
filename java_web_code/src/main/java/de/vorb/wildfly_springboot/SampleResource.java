@@ -26,7 +26,7 @@ public class SampleResource {
             Date date = new Date();
             sbrBuildSystem.append("<h2> IP Address where this was built: " + inetAddress.getHostAddress() + "<br> Hostname where this was built: " + inetAddress.getHostName() + "<br> Time when this was built: " + sdf.format(date) + "<br>");
 
-        	String strReturn = strHello + sbrBuildSystem + strDia + strDoc;
+        	String strReturn = strHello + sbrBuildSystem ;
         	return strReturn;
 
     }
