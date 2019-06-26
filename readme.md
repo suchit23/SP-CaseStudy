@@ -20,4 +20,12 @@ This demonstration will simulate a completely automated CI/CD deployment pipelin
 
 ## Environment URLs
 
-Jenkins Access using username guest password guest:	[http://dev.suchit23.in:8080](http://dev.suchit23.in:8080)
+Jenkins Access using username **guest** password **guest** :	[http://dev.suchit23.in:8080](http://dev.suchit23.in:8080)
+DEV Environment with standalone Wildfly installation :	[http://dev.suchit23.in](http://dev.suchit23.in)
+
+TEST Environment running docker :	[http://test.suchit23.in](http://test.suchit23.in)
+SonarQube Server using username **admin** password **admin** :	[http://test.suchit23.in:9000](http://test.suchit23.in:9000)
+
+Nagios Monitoring using username **nagiosadmin** and password **nagiosadmin** :	[http://sandbox.suchit23.in/nagios/](http://sandbox.suchit23.in/nagios/)
+
+PROD Environment running in Kubernetes Cluster :	[http://www.suchit23.in](http://www.suchit23.in)
