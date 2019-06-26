@@ -1,9 +1,9 @@
-# # Suchit's Complete CI/CD Pipeline Demonstration # 
+# Suchit's Complete CI/CD Pipeline Demonstration # 
 
 
 ----------
 
-**Deliverables**:
+##Deliverables##
 This demonstration will simulate a completely automated CI/CD deployment pipeline using Jenkins. It will essentially do the following steps (phases):
  1. Pull the source code for a Java EE based Project from GIT. (SCM AUTOMATION)
  2. Compile (build) the code using Maven to generate the .war file (BUILD AUTOMATION)
@@ -17,3 +17,7 @@ This demonstration will simulate a completely automated CI/CD deployment pipelin
  10. Pull the Docker image from docker hub and deploy to a Kubernetes cluster in the cloud (PROD ENV) (DEPLOYMENT AUTOMATION)
 
 ![Architecture Diagram](http://www.suchit23.in/spdevops.jpg)
+
+##Environment URLs##
+
+Jenkins Access using username guest password guest:	[http://dev.suchit23.in:8080](http://dev.suchit23.in:8080)
