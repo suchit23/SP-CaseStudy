@@ -16,4 +16,4 @@ This demonstration will simulate a completely automated CI/CD deployment pipelin
  9. Test the docker container using Selenium for specific texts in the web page (TEST AUTOMATION)
  10. Pull the Docker image from docker hub and deploy to a Kubernetes cluster in the cloud (PROD ENV) (DEPLOYMENT AUTOMATION)
 
-![alt text](https://www.github.com/suchit23/SP-CaseStudy/tree/master/java_web_code/src/main/webapp/spdevops.jpg)
+![Architecture Diagram](http://www.suchit23.in/spdevops.jpg)
