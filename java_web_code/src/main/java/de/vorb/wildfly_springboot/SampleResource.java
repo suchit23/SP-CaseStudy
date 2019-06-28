@@ -4,10 +4,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.io.BufferedReader;
 import java.net.InetAddress;
-//import java.util.Date;
-//import java.text.DateFormat;
-//import java.text.SimpleDateFormat;
-//import java.util.TimeZone;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
@@ -25,9 +21,6 @@ public class SampleResource {
             StringBuffer sbrBuildSystem = new StringBuffer();
             StringBuffer sbrDate = new StringBuffer();
             InetAddress inetAddress = InetAddress.getLocalHost();
-            //DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-            //sdf.setTimeZone(TimeZone.getTimeZone("IST"));
-            //Date date = new Date();
             
             try{
                 String parseLine; 
@@ -42,7 +35,7 @@ public class SampleResource {
             catch (MalformedURLException me){System.out.println(me);}
             catch (IOException ioe){System.out.println(ioe);}
 
-            sbrBuildSystem.append("<h2> IP Address where this was built: " + inetAddress.getHostAddress() + "<br> Hostname where this was built: " + inetAddress.getHostName() + "<br> Time when this was built: " + sbrDate + "<br></h2>");
+            sbrBuildSystem.append("<h2> IP Address where this was built: " + inetAddress.getHostAddress() + "<br> Hostname where this was built: " + inetAddress.getHostName() + "<br> Time when this CI/CI was started: " + sbrDate + "<br></h2>");
             
             String strReturn = strHello + sbrBuildSystem + strDia;
         	return strReturn;
