@@ -31,7 +31,7 @@ public class SampleResource {
             
             try{
                 String parseLine; 
-                URL url= new URL("/date.txt");
+                URL url= new URL("http://dev.suchit23.in/date.txt");
                 BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
                 while ((parseLine = br.readLine()) != null) {
                 System.out.println(parseLine);
