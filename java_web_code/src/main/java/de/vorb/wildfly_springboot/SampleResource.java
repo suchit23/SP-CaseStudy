@@ -15,18 +15,32 @@ public class SampleResource {
     @RequestMapping("/")
     public String hello() throws Exception {
 
-            String parseLine; 
 			String strHello = "<center><font face=verdana><h1>Hello and welcome to Suchit's CI/CD Pipeline Demo! ----- Version 16.0</h1>";
             String strDia = "<br><img src=/spdevops.jpg><br>";
             String strDoc = "<h2><a href=http://blog.suchit23.in/devops-cicd-using-jenkins-maven-docker-sonar-selenium-kubernetes/> Step by Step Guide to implement this project</h2></center></font><br>";
             StringBuffer sbrBuildSystem = new StringBuffer();
+            StringBuffer sbrDate = new StringBuffer();
             InetAddress inetAddress = InetAddress.getLocalHost();
-            DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-            sdf.setTimeZone(TimeZone.getTimeZone("IST"));
-            Date date = new Date();
-            sbrBuildSystem.append("<h2> IP Address where this was built: " + inetAddress.getHostAddress() + "<br> Hostname where this was built: " + inetAddress.getHostName() + "<br> Time when this was built: " + sdf.format(date) + "<br>");
+            //DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            //sdf.setTimeZone(TimeZone.getTimeZone("IST"));
+            //Date date = new Date();
+            
+            try{
+                String parseLine; 
+                URL url= new URL("/date.txt");
+                BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
+                while ((parseLine = br.readLine()) != null) {
+                System.out.println(parseLine);
+                sbrDate.append(parseLine);
+                }
+                br.close();
+            } 
+            catch (MalformedURLException me){System.out.println(me);}
+            catch (IOException ioe){System.out.println(ioe);}
 
-        	String strReturn = strHello + sbrBuildSystem + strDia;
+            sbrBuildSystem.append("<h2> IP Address where this was built: " + inetAddress.getHostAddress() + "<br> Hostname where this was built: " + inetAddress.getHostName() + "<br> Time when this was built: " + sbrDate + "<br>");
+            
+            String strReturn = strHello + sbrBuildSystem + strDia;
         	return strReturn;
 
     }
