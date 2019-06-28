@@ -42,7 +42,7 @@ public class SampleResource {
             catch (MalformedURLException me){System.out.println(me);}
             catch (IOException ioe){System.out.println(ioe);}
 
-            sbrBuildSystem.append("<h2> IP Address where this was built: " + inetAddress.getHostAddress() + "<br> Hostname where this was built: " + inetAddress.getHostName() + "<br> Time when this was built: " + sbrDate + "<br>");
+            sbrBuildSystem.append("<h2> IP Address where this was built: " + inetAddress.getHostAddress() + "<br> Hostname where this was built: " + inetAddress.getHostName() + "<br> Time when this was built: " + sbrDate + "<br></h2>");
             
             String strReturn = strHello + sbrBuildSystem + strDia;
         	return strReturn;
